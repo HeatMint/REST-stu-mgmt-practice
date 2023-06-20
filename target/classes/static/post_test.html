@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post test</title>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js" integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <p>Name &emsp;&emsp;
+      Gender&emsp;&emsp; DOB&emsp;&emsp; PlaceOB&emsp;&emsp;
+      ethinicity&emsp;&emsp; region&emsp;&emsp; ID_Type&emsp;&emsp;
+      ID&emsp;&emsp; political_status</p>
+  <form action="" id="ff" name="ff">
+      <input type="text" name="name" id="name">
+      <input type="text" name="gender" id="gender">
+      <input type="text" name="dob" id="dob">
+      <input type="text" name="pob" id="pob">
+      <input type="text" name="ethnicity" id="ethnicity">
+      <input type="text" name="region" id="region">
+      <input type="text" name="idtype" id="idtype">
+      <input type="text" name="id" id="id">
+      <input type="text" name="politicalstatus" id="politicalstatus">
+  </form>
+  <button type="button" onclick="submit()">Submit</button>
+    <script>
+        function submit(){
+
+            // var name = document.getElementById("name").value;
+            // var gender = document.getElementById("gender").value;
+            // var dob = document.getElementById("dob").value;
+            // var pob = document.getElementById("pob").value;
+            // var ethnicity = document.getElementById("ethnicity").value;
+            // var region = document.getElementById("region").value;
+            // var idtype = document.getElementById("idtype").value;
+            // var id = document.getElementById("id").value;
+            // var politicalstatus = document.getElementById("politicalstatus").value;
+
+            var formData = JSON.stringify($("#ff").serializeArray());
+
+            var url = "addStudent";
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: formData,
+                success: function(){},
+                dataType: "json",
+                contentType : "application/json"
+            });
+
+            // var req = new XMLHttpRequest();
+            // req.open("POST",url,true);
+            // req.setRequestHeader('Content-type', 'application/json');
+            // req.send();
+        }
+    </script>
+</body>
+</html>

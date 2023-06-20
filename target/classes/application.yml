@@ -1,4 +1,4 @@
 spring:
   datasource:
     driver-class-name: org.sqlite.JDBC
-    url: jdbc::resources:database/people.db
+    url: jdbc:sqlite::resource:database/people.db

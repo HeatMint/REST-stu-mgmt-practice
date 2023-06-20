@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @MapperScan("com.baomidou.mybatisplus.samples.quickstart.mapper")
+@MapperScan("org.mainapp.mapper")
 public class MainApp {
     public static void main(String args[]){
         SpringApplication.run(MainApp.class, args);
