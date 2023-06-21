@@ -42,14 +42,14 @@ public class studentController {
     @PostMapping(value = "/delStudent")
     public String delStudent(@RequestBody Map<String, String> map){
         System.out.println("ReqRecieved!\n");
-        Map m = new HashMap();
-
-        Set<String> key_set = map.keySet();
-
-        for (String key: key_set) {
-            String value = map.get(key);
-            m.put(key,value);
-        }
+//        Map m = new HashMap();
+//
+//        Set<String> key_set = map.keySet();
+//
+//        for (String key: key_set) {
+//            String value = map.get(key);
+//            m.put(key,value);
+//        }
 
         studentMapper.deleteByMap(m);
         return "Sucess!";
