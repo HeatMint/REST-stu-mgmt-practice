@@ -40,7 +40,7 @@ public class studentController {
     }
 
     @PostMapping(value = "/delStudent")
-    public String delStudent(@RequestBody Map<String, String> map){
+    public String delStudent(@RequestBody Map<String, Object> map){
         System.out.println("ReqRecieved!\n");
 //        Map m = new HashMap();
 //
@@ -50,8 +50,9 @@ public class studentController {
 //            String value = map.get(key);
 //            m.put(key,value);
 //        }
+        //昨天脑子昏头了写这玩意出来
 
-        studentMapper.deleteByMap(m);
+        studentMapper.deleteByMap(map);
         return "Sucess!";
     }
 
