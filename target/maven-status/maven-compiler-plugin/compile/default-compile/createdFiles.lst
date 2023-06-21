@@ -1,1 +1,4 @@
+org\mainapp\MainApp.class
+org\mainapp\mapper\StudentMapper.class
 org\mainapp\cls\Student.class
+org\mainapp\controller\studentController.class
